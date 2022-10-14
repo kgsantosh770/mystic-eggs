@@ -1,0 +1,9 @@
+@mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+      background-color: $light-background;
+      color: $light-text;
+    } @else {
+      background-color: $dark-background;
+      color: $dark-text;
+    }
+  }

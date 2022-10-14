@@ -1,3 +1,21 @@
-#root{
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#root, input, textarea, button{
     font-family: $font-regular;
+}
+
+.App{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#light, #light input, #light textarea, #light button{
+    @include theme-colors();
+}
+
+#dark, #dark input, #dark textarea, #dark button{
+    @include theme-colors(false);
 }
