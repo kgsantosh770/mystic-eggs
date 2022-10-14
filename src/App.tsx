@@ -1,7 +1,15 @@
+import { useSelector } from 'react-redux';
+
 function App() {
+
+  interface themeState {
+    theme: string,
+  }
+
+  const theme = useSelector((state: themeState) => state.theme)
+
   return (
-    <div className="App">
-      Hello world
+    <div className="App" id={theme}>
     </div>
   );
 }
