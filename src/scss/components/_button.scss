@@ -1,9 +1,7 @@
-@import '../base/variables';
-
 button{
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 15px;
     font-family: $font-bold;
     background-color: transparent;
     cursor: pointer;
@@ -16,5 +14,17 @@ button{
     }
     &.outlined {
         border: 2px solid;
+    }
+}
+
+#light{
+    button{
+        @include theme-colors(false);
+    }
+}
+
+#dark{
+    button{
+        @include theme-colors();
     }
 }
