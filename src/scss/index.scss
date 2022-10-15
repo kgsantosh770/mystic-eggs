@@ -1,4 +1,11 @@
+@tailwind base;
+@tailwind utilities;
+
 @import "./base/fonts";
 @import "./base/variables";
 @import "./base/mixins";
 @import "./base/global";
+
+//components
+@import "./components/button";
+@import "./components/header";
