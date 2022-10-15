@@ -26,13 +26,13 @@ nav {
 #light nav{
     @include theme-colors(false);
     ul img{
-        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(35deg) brightness(110%) contrast(113%);
+        filter: $svg-black-filter;
     }
 }
 
 #dark nav{
     @include theme-colors();
     ul img{
-        filter: invert(2%) sepia(31%) saturate(2979%) hue-rotate(199deg) brightness(100%) contrast(97%);
+        filter: $svg-white-filter;
     }
 }
