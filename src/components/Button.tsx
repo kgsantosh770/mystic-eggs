@@ -1,9 +1,8 @@
 import React, { MouseEventHandler } from 'react'
-import '../scss/components/button.scss';
 
 interface Props {
   children: React.ReactNode,
-  size?: string,
+  size?: 'small' | 'large',
   className?: string,
   variant?: 'outlined' | 'contained',
   onClick: MouseEventHandler<HTMLButtonElement>,
