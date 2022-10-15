@@ -9,7 +9,7 @@ import BagIcon from "../assets/images/icons/bag.svg";
 export default function Sidebar() {
     const [isExpanded, setIsExpanded] = useState(false)
     return (
-        <nav className="fixed top-0 px-1 h-full">
+        <nav className="fixed top-0 h-full">
             <img className="logo mt-6 mb-12 rounded-full mx-auto" src={Logo} alt="Logo" />
             <ul>
                 <li>
