@@ -1,4 +1,4 @@
-button{
+.custom-btn{
     padding: 10px 20px;
     border: none;
     font-family: $font-bold;
@@ -17,13 +17,13 @@ button{
 }
 
 #light{
-    button{
+    .custom-btn{
         @include theme-colors(false);
     }
 }
 
 #dark{
-    button{
+    .custom-btn{
         @include theme-colors();
     }
 }
