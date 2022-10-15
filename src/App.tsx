@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import Header from './components/Header';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className="App" id={theme}>
+        <Header></Header>
     </div>
   );
 }
