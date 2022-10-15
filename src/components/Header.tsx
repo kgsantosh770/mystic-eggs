@@ -1,11 +1,11 @@
 import Button from './Button';
+import Searchbar from './Searchbar';
 
 export default function Header() {
     return (
-        <header>
-            <h2 className='title font-bold'>Mystic Eggs</h2>
-            {/* <Searchbar></Searchbar> */}
-            <Button className='connect-btn' onClick={()=>{}} variant='contained' size='large'>Connect Wallet</Button>
+        <header className='flex flex-row items-center'>
+            <Searchbar className="mx-auto" placeholder="Search NFT's here" />
+            <Button className='connect-btn' onClick={()=>{}} variant='contained'>Connect Wallet</Button>
         </header>
     )
 }

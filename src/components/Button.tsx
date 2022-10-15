@@ -12,7 +12,7 @@ export default function Button(props: Props) {
   return (
     <button
       className=
-      {`button${props.size ? ' ' + props.size : ''}${props.variant ? ' ' + props.variant : ''}${props.className ? ' ' + props.className : ''}`}
+      {`button rounded-full${props.size ? ' ' + props.size : ''}${props.variant ? ' ' + props.variant : ''}${props.className ? ' ' + props.className : ''}`}
       onClick={props.onClick}
     >
       {props.children}
