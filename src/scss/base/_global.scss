@@ -7,15 +7,10 @@ body{
     font-family: $font-regular;
 }
 
-.App{
-    width: 100vw;
-    min-height: 100vh;
-}
-
-#light, #light input, #light textarea, #light button{
+#light{
     @include theme-colors();
 }
 
-#dark, #dark input, #dark textarea, #dark button{
+#dark{
     @include theme-colors(false);
 }
