@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind utilities;
 
+// custom tailwind utilities
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
 @import "./base/fonts";
 @import "./base/variables";
 @import "./base/mixins";
@@ -11,4 +23,5 @@
 @import "./components/header";
 @import "./components/searchbar";
 @import "./components/sidebar";
-@import "./components/banner"
+@import "./components/banner";
+@import "./components/card";

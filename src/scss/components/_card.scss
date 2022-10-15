@@ -1,0 +1,26 @@
+.card {
+    width: max-content;
+
+    .img-wrapper{
+        width: 20rem;
+    }
+    .nft-img {
+        transition: 0.3s all ease-in-out;
+    }
+    &:hover {
+        .nft-img {
+            transform: scale(1.1);
+        }
+    }
+    .nft-details{
+        font-family: $font-bold;
+        color: $dark-text;
+    }
+}
+
+.grid .card {
+    width: unset;
+    .img-wrapper{
+        width: 100%;
+    }
+}
