@@ -1,5 +1,4 @@
-import Banner from '../components/Banner';
-import Card from '../components/Card';
+import CardGroup from "../components/CardGroup";
 
 const data = [
   {
@@ -54,12 +53,10 @@ const data = [
 ]
 
 export default function Homepage() {
-  const nfts = data.map((nft) => <Card key={nft.id} nft={nft}></Card>)
+  
   return (
     <>
-        <Banner heading='Trending'>
-          {nfts}
-        </Banner>
+        <CardGroup heading='Trending' cardsData={data}/>
     </>
   )
 }

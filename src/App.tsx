@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import Banner from './components/Banner';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Homepage from './pages/Homepage';

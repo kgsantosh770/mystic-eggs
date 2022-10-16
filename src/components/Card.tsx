@@ -1,4 +1,4 @@
-interface NFT {
+export interface NFT {
   id: number,
   owner: string,
   imageSrc: string,
