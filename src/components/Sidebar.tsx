@@ -11,7 +11,7 @@ import WalletIcon from "../assets/images/icons/wallet.svg";
 export default function Sidebar() {
     const [isExpanded, setIsExpanded] = useState(false)
     return (
-        <nav className="fixed top-0 h-full w-14 flex flex-col place-self-center">
+        <nav className="fixed top-0 h-full w-16 flex flex-col place-self-center">
             <button className="mx-auto my-7">
                 <img className="logo" src={Logo} alt={PRODUCT_NAME} title={PRODUCT_NAME} />
             </button>
