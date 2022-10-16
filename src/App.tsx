@@ -15,10 +15,11 @@ function App() {
   return (
     <div className="App" id={theme}>
         <Sidebar></Sidebar>
-        <div className="container ml-[55px] py-6 px-14">
+        <div className="lg:w-2/3 ml-16 py-6 px-10 lg:pl-14 lg:pr-3">
           <Header></Header>
           <Homepage />
         </div>
+        <div className='w-1/3 pr-14 pl-3'></div>
     </div>
   );
 }
