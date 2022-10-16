@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App" id={theme}>
         <Sidebar></Sidebar>
-        <div className="container ml-[55px] py-6 px-9">
+        <div className="container ml-[55px] py-6 px-14">
           <Header></Header>
           <Homepage />
         </div>
