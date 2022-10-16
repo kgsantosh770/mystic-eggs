@@ -1,15 +1,6 @@
 input.searchbar {
-    border: 2px solid $dark-background;
-    box-shadow: 0 0 4px 1px $light-gray-background;
-    &:focus-visible {
-        box-shadow: 0 0 6px 3px $light-gray-background;
-    }
+    background-color: $light-gray-background;  
     &::-webkit-search-cancel-button {
         appearance: none;
-        height: 24px;
-        width: 24px;
-        margin: auto;
-        cursor: pointer;
-        background: url("/assets/images/icons/cross.svg") no-repeat;
     }
 }
