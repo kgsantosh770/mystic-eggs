@@ -21,7 +21,7 @@ export default function Card({ nft }: Props) {
         />
         <div className="absolute h-full w-full top-0 bg-gradient-to-b from-transparent via-transparent to-slate-800"></div>
       </div>
-      <div className="nft-details absolute w-full px-5 pb-3 bottom-0 mt-4">
+      <div className="nft-details font-base-bold absolute w-full px-5 pb-3 bottom-0 mt-4">
         <p className="mb-1">{nft.owner}</p>
         <p>Price: {nft.price} {nft.currency}</p>
       </div>

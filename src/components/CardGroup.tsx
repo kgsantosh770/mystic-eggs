@@ -10,7 +10,7 @@ export default function CardGroup(props: Props) {
     const cards = props.cardsData.map((card) => <Card key={card.id} nft={card}></Card>)
     return (
         <div className="card-group">
-            {props.heading && <h1 className="mb-9 text-3xl">{props.heading}</h1>}
+            {props.heading && <h1 className="font-base-bold mb-5 text-3xl">{props.heading}</h1>}
             <div className={
                 props.horizontalScrolling ?
                     "flex flex-row gap-3 overflow-x-auto snap-mandatory snap-x no-scrollbar" :

@@ -8,7 +8,7 @@ export default function Header() {
     const [notify, setNotify] = useState(false);
     
     return (
-        <header className='flex flex-row items-center justify-between mb-14'>
+        <header className='flex flex-row items-center justify-between mb-10'>
             <Searchbar placeholder="Search NFT's here" />
             <ul className="right-section flex flex-row">
                 <li>

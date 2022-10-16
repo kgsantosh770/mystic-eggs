@@ -3,10 +3,6 @@ body{
     margin: 0;
 }
 
-#root, input, textarea, button{
-    font-family: $font-regular;
-}
-
 #light{
     @include theme-colors();
 }
