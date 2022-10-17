@@ -50,3 +50,9 @@ export const NFT_DATA = [
         currency: 'ETH',
     }
 ]
+export const WALLET = {
+    publicAddress: "0x23423h2342k2l34h2ik23423",
+    walletBalance: 6745.56,
+    lastTransaction: 34.2456,
+    currencyType: "ETH",
+}

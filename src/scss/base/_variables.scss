@@ -4,7 +4,11 @@ $light-text: #070b13;
 $dark-background: #070b13;
 $dark-text: #ffffff;
 
-$primary-color: #ffa40b;
+$gray-text: #a9abad;
+$dark-gray-text: #88898b;
+
+$primary-color: #ffa60bc2;
+$primary-color-light: #ffa60b34;
 $white: #ffffff;
 $black: #000000;
 $bg-shadow: #888888;
@@ -12,3 +16,5 @@ $light-gray-background: #f5f7f9;
 
 $svg-black-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(35deg) brightness(110%) contrast(113%);
 $svg-white-filter: invert(2%) sepia(31%) saturate(2979%) hue-rotate(199deg) brightness(100%) contrast(97%);
+$svg-gray-filter: invert(57%) sepia(1%) saturate(0%) hue-rotate(215deg) brightness(95%) contrast(86%);
+$svg-primary-filter: invert(82%) sepia(32%) saturate(7493%) hue-rotate(360deg) brightness(101%) contrast(108%)

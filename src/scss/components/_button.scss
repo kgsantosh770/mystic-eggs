@@ -1,9 +1,7 @@
 .custom-btn{
     padding: 10px 20px;
     border: none;
-    background-color: transparent;
-    cursor: pointer;
-
+    background-color: $primary-color;
     &.small{
         padding: 5px 20px;
     }
@@ -12,17 +10,5 @@
     }
     &.outlined {
         border: 2px solid;
-    }
-}
-
-#light{
-    .custom-btn{
-        @include theme-colors(false);
-    }
-}
-
-#dark{
-    .custom-btn{
-        @include theme-colors();
     }
 }

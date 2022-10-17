@@ -2,12 +2,11 @@ import SearchIcon from "../assets/images/icons/search.svg";
 
 interface Props {
     placeholder: string,
-    className?: string,
 }
 
 export default function Searchbar(props: Props) {
     return (
-        <div className={`relative w-80 max-w-screen-lg flex items-center mb-[5px] ${props.className}`}>
+        <div className={`relative w-80 max-w-screen-lg flex items-center`}>
             <img
                 className="w-[22px] h-[22px] absolute left-[20px]"
                 src={SearchIcon}

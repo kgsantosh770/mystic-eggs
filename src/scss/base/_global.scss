@@ -10,3 +10,10 @@ body{
 #dark{
     @include theme-colors(false);
 }
+
+.gray-text{
+    color: $gray-text;
+}
+.dark-gray-text{
+    color: $dark-gray-text;
+}
