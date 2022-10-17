@@ -1,9 +1,12 @@
 .insights-bar {
     box-shadow: -2px 0px 10px 1px $light-gray-background;
     .topbar img{
-        filter: $svg-primary-filter;
+        filter: $svg-gray-filter;
     }
     .add-widget {
         background-color: $primary-color-light;
+        img {
+            filter: $svg-primary-filter;
+        }
     }
 }
