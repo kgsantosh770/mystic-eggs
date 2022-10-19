@@ -1,10 +1,16 @@
-import {ethers} from 'hardhat';
+import { ethers } from 'hardhat';
 
 const main = async () => {
-    const nftContractFactory = await ethers.getContractFactory('NFT');
+    const nftContractFactory = await ethers.getContractFactory('AnimeNFT');
     const nftContract = await nftContractFactory.deploy();
     await nftContract.deployed();
-    console.log('contract deployed to: ',nftContract.address);
+    console.log('contract deployed to: ', nftContract.address);
+
+    let txn = await nftContract.makeAnimeNFT();
+    await txn.wait();
+
+    txn = await nftContract.makeAnimeNFT();
+    await txn.wait();
 }
 
 const runMain = async () => {
