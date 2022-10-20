@@ -2,7 +2,7 @@ import CardGroup from "../components/CardGroup";
 import Header from "../components/Header";
 import HeroBanner from "../components/HeroBanner";
 import Insightsbar from "../components/Insightsbar";
-import { NFT_DATA } from "../constants/Constant.ts";
+import { NFT_DATA } from "../constants/Constant";
 
 export default function Homepage() {
   return (

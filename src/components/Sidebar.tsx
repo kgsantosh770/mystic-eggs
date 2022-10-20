@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { PRODUCT_NAME } from "../constants/Constant.ts";
+import { PRODUCT_NAME } from "../constants/Constant";
 
 import Logo from "../assets/images/logo.png";
 import HomeIcon from "../assets/images/icons/home.svg";

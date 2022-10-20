@@ -1,4 +1,4 @@
-import { WALLET } from "../constants/Constant.ts"
+import { WALLET } from "../constants/Constant"
 import EtherIcon from "../assets/images/icons/ether.svg";
 import Button from "./Button";
 import Widget from "./Widget";
