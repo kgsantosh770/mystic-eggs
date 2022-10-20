@@ -1,11 +1,11 @@
-import React, { MouseEventHandler } from 'react'
+import React from 'react'
 
 interface Props {
   children: React.ReactNode,
   size?: 'small' | 'large',
   className?: string,
   variant?: 'outlined' | 'contained',
-  onClick: MouseEventHandler<HTMLButtonElement>,
+  onClick: React.MouseEventHandler<HTMLButtonElement>,
 }
 
 export default function Button(props: Props) {
