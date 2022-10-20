@@ -1,3 +1,6 @@
+import { ethers } from 'ethers';
+import abi from './abi.json';
+
 export const PRODUCT_NAME = 'Mystic Eggs';
 export const NFT_DATA = [
     {
@@ -50,9 +53,5 @@ export const NFT_DATA = [
         currency: 'ETH',
     }
 ]
-export const WALLET = {
-    publicAddress: "0x23423h2342k2l34h2ik23423",
-    walletBalance: 6745.56,
-    lastTransaction: 34.2456,
-    currencyType: "ETH",
-}
+export const ANIME_NFT_CONTRACT_ADDRESS = '0xeE86d953d88fCAd316DB3A65Ba0941Ec17e5541d';
+export const ANIME_NFT_ABI = abi as unknown as ethers.ContractInterface;

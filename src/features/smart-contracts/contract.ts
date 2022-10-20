@@ -1,4 +1,7 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { ethers } from "ethers";
+import { useAppSelector } from "../../app/hooks";
+import { ANIME_NFT_ABI, ANIME_NFT_CONTRACT_ADDRESS } from "../../constants/Constant";
 
 type lastMintedNFTAddress = string;
 
@@ -17,7 +20,21 @@ const initialState: InitialState = {
 export const mintAnimeNFT = createAsyncThunk(
     'contract/mintAnimeNFT',
     async () => {
-        return "blah"
+        if (window.ethereum) {
+            try {
+                const animeContract = new ethers.Contract(ANIME_NFT_CONTRACT_ADDRESS, ANIME_NFT_ABI, useAppSelector((state) => state.wallet.signer));
+                console.log("Going to pop wallet now to pay gas...")
+                let nftTxn = await animeContract.mintAnimeNFT();
+                await nftTxn.wait();
+                console.log(`Mined, see transaction: https://goerli.etherscan.io/tx/${nftTxn.hash}`);
+                return nftTxn.hash;
+            } catch (error) {
+                return "Unknown error occured. Please try agin after few minutes."
+            }
+        } else {
+            return "Unknown error occured. Please try agin after few minutes."
+        }
+
     }
 )
 

@@ -1,4 +1,3 @@
-import { WALLET } from "../constants/Constant"
 import EtherIcon from "../assets/images/icons/ether.svg";
 import Button from "./Button";
 import Widget from "./Widget";
@@ -21,15 +20,15 @@ export default function BalanceWidget() {
     <Widget>
       <p className="font-base-semibold text-md mb-4 gray-text">Your Balance</p>
       <p className="balance text-3xl font-base-bold mb-4">
-        {WALLET.walletBalance}
+        {wallet.walletAddress ? 455.30 : 0}
         <span className="ml-3 text-lg">
-          {WALLET.currencyType}
+          ETH
         </span>
       </p>
       <p className="text-sm dark-gray-text mb-8">
         Last transaction
         <img className="mx-2 mb-1.5 w-[22px] h-[22px] inline" src={EtherIcon} alt="cryto currency" />
-        {WALLET.lastTransaction} {WALLET.currencyType}
+        {wallet.walletAddress ? 34.67 : 'Not found'} ETH
       </p>
       <Button onClick={handleClick} className="block mx-auto min-w-[130px]">
         {wallet.loading === true ?

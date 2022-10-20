@@ -1,7 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { sign } from "crypto";
 import { ethers } from 'ethers';
-import { loadavg } from "os";
 
 declare global {
     interface Window {
@@ -9,12 +7,13 @@ declare global {
     }
 }
 
-type walletAddress = string;
+interface Payload {
+    provider: ethers.providers.Provider | undefined,
+    signer: ethers.Signer | undefined,
+    walletAddress: string | undefined,
+}
 
-interface WalletState {
-    provider: any | undefined,
-    signer: string | undefined,
-    walletAddress: walletAddress | undefined,
+interface WalletState extends Payload{
     loading: boolean,
     error: string | undefined,
 }
@@ -36,9 +35,13 @@ export const connectWallet = createAsyncThunk(
             await provider.send('eth_requestAccounts', []);
             const signer = provider.getSigner();
             const walletAddress = await signer.getAddress();
-            return walletAddress;
+            return {
+                provider: provider,
+                signer: signer,
+                walletAddress: walletAddress
+            };
         }
-        return "Oops! Metamask not detected"
+        throw Error("Oops! Metamask not detected");
     }
 )
 
@@ -55,9 +58,12 @@ const walletSlice = createSlice({
         )
         builder.addCase(
             connectWallet.fulfilled,
-            (state, action: PayloadAction<walletAddress>) => {
+            (state, action: PayloadAction<Payload>) => {
                 state.loading = false;
-                state.walletAddress = action.payload;
+                const {provider, signer, walletAddress} = action.payload
+                state.provider = provider;
+                state.signer = signer;
+                state.walletAddress = walletAddress;
             }
         )
         builder.addCase(
@@ -68,8 +74,6 @@ const walletSlice = createSlice({
             }
         )
     }
-
 })
 
-export const { } = walletSlice.actions;
 export default walletSlice.reducer;
